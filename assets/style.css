@@ -90,16 +90,20 @@ h2 { font-size: clamp(38px, 5vw, 64px); }
   box-shadow: 0 18px 60px rgba(35, 45, 38, .06);
 }
 
-.app-icon {
-  display: grid;
-  width: 88px;
-  height: 88px;
-  place-items: center;
-  border-radius: 22px;
-  color: #fff;
-  background: var(--green);
-  font-size: 34px;
-  font-weight: 800;
+.app-logo {
+  display: flex;
+  width: clamp(120px, 16vw, 180px);
+  min-height: 88px;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 112px;
+  object-fit: contain;
 }
 
 .app-label { margin: 0 0 5px; color: var(--accent); font-size: 12px; font-weight: 800; }
@@ -141,6 +145,7 @@ footer p { margin: 0; }
   .site-header { min-height: 72px; }
   .hero { padding-block: 82px 100px; }
   .app-card { grid-template-columns: auto 1fr; gap: 20px; }
+  .app-logo { width: clamp(104px, 32vw, 140px); }
   .card-actions { grid-column: 1 / -1; margin-top: 8px; }
   .card-actions a { min-width: 0; }
   footer { flex-direction: column; gap: 8px; }
